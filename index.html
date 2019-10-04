@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Slider-js</title>
+    <!-- TINY SKIDER -->
+    <link rel="stylesheet" href="node_modules/tiny-slider/dist/tiny-slider.css">
+    <!-- STYLE -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #title {
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .my-slider {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            border: 1px solid black;
+        }
+
+        img {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Slider-js</h1>
+
+    <div class="my-slider" onmouseover="pause()" onmouseout="play()">
+        <img src="img/image1.jpg" alt="iamge1" />
+        <img src="img/image2.jpg" alt="iamge2" />
+        <img src="img/image3.jpg" alt="iamge3" />
+        <img src="img/image4.jpg" alt="iamge4" />
+        <img src="img/image5.jpg" alt="iamge5" />
+        <img src="img/image1.jpg" alt="iamge6" />
+        <img src="img/image2.jpg" alt="iamge7" />
+        <img src="img/image3.jpg" alt="iamge8" />
+        <img src="img/image4.jpg" alt="iamge9" />
+        <img src="img/image5.jpg" alt="iamge10" />
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="node_modules/tiny-slider/dist/tiny-slider.js"></script>
+    <script>
+        const slider = tns({
+            "container": ".my-slider",
+            "items": 8,
+            "speed": 700,
+            "mouseDrag": true,
+            "autoplay": true,
+            "autoplayTimeout": 1500,
+            'controls': false,
+            'nav': false,
+            'autoplayButtonOutput': false
+        });
+
+        function pause() {
+            slider.pause();
+        }
+
+        function play() {
+            slider.play();
+        }
+    </script>
+</body>
+
+</html>
