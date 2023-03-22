@@ -1,4 +1,4 @@
-slider-js
+Slider JS
 
 Slider o carousel para mostrar articulos o productos, hecho con javascript, sin jquery
 
